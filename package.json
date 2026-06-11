@@ -1,0 +1,46 @@
+{
+  "name": "gitnexus-desktop",
+  "version": "1.0.0",
+  "description": "Cliente Git multi-cuenta con IA integrada y aislamiento seguro de credenciales",
+  "main": "out/main/index.cjs",
+  "author": "GitNexus",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "start": "electron-vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "postinstall": "electron-builder install-app-deps",
+    "package:mac": "electron-vite build && electron-builder --mac",
+    "package:win": "electron-vite build && electron-builder --win",
+    "package:linux": "electron-vite build && electron-builder --linux",
+    "package:all": "electron-vite build && electron-builder -mwl"
+  },
+  "dependencies": {
+    "@gitgraph/js": "^1.4.0",
+    "better-sqlite3": "^11.5.0",
+    "dotenv": "^16.4.5",
+    "monaco-editor": "^0.52.0",
+    "openai": "^4.71.0",
+    "pinia": "^2.2.4",
+    "simple-git": "^3.27.0",
+    "vue": "^3.5.13",
+    "vue-i18n": "^9.14.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.4",
+    "@vitest/coverage-v8": "^2.1.0",
+    "autoprefixer": "^10.4.20",
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8",
+    "electron-vite": "^2.3.0",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "vite": "^5.4.10",
+    "vitest": "^2.1.0"
+  }
+}
